@@ -9,12 +9,7 @@ def hello_world():
 
 @app.route('/create')
 def create():
-    return "Hello Jane"
-
-
-
-
-
+        return render_template('Template 2.html')
 
 
 
