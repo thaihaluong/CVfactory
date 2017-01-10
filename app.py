@@ -8,7 +8,7 @@ def hello_world():
     return render_template('main.html')
 
 @app.route('/cv')
-def cv():
+def cvtemp1():
     return render_template('Template 1.html')
 
 @app.route('/create')
