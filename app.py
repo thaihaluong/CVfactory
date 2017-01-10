@@ -7,6 +7,10 @@ app = Flask(__name__)
 def hello_world():
     return render_template('main.html')
 
+@app.route('/cv')
+def cv():
+    return render_template('Template 1.html')
+
 @app.route('/create')
 def create():
         return render_template('Template 2.html')
