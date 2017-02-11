@@ -12,12 +12,13 @@
         <h2 class="w3-container w3-blue" style="height: 50px;width: 100%">CV FORM</h2>
         <div class="w3-container">
         <form class="w3-form w3-container" method="post" action="{{ url_for('cv_form') }}">
-            <ul class="tab">
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'basic_info')">Basic Information</a></li>
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'work_exp')">Working Experience</a></li>
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'education')">Education</a></li>
-</ul>
+ <nav class="w3-sidenav w3-light-grey w3-card-2" style="width:200px;height:60%">
 
+  <a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'basic_info')">Basic Information</a>
+  <a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'work_exp')">Working Experience</a>
+  <a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'education')">Education</a>
+ </nav>
+<div style="margin-left:200px">
 <div id="basic_info" class="tabcontent">
   <h3>Personal Information</h3>
   <label for="name">Full name</label><br>
@@ -60,7 +61,7 @@
     <input type="text" name="edu-desc">
 </div>
 
-
+</div>
 
             <input type="submit">
         </form>
@@ -75,7 +76,7 @@ function openTab(evt, name) {
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = tablinks[i].className.replace("active");
     }
     document.getElementById(name).style.display = "block";
     evt.currentTarget.className += " active";
