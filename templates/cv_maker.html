@@ -3,31 +3,22 @@
 <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CV</title>
+    <title>CV Maker</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
     <link rel="stylesheet" href="../static/w3.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
 .mySlides {display:none;}
 </style>
 <body>
-<nav class="w3-sidenav w3-white w3-card-2" style="display:none" id="mySidenav">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-closenav w3-large">Close &times;</a>
-  <a class="w3-hover-green" href="#">Link 1</a>
-  <a class="w3-hover-black" href="#">Link 2</a>
-  <a class="w3-hover-blue" href="#">Link 3</a>
-  <a class="w3-hover-purple" href="#">Link 4</a>
-  <a class="w3-hover-indigo" href="#">Link 5</a>
-</nav>
 
-<header class="w3-container w3-orange">
-  <span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>
-    <h1 class="w3-center" style="font-family:'Footlight MT Light' ">MAKE A CV</h1>
+<header class="w3-container w3-black">
+
+    <h1 class="w3-center" style="font-family: 'UTM Bebas' ">PROFESSIONAL RESUME FOR A SUCCESSFUL CAREER</h1>
 
 </header>
-
 <script>
 function w3_open() {
     document.getElementById("mySidenav").style.display = "block";
@@ -37,13 +28,13 @@ function w3_close() {
 }
 </script>
 
-<div class="w3-border" style="background-image: url(http://www.princeton.edu/~mostafa/images/cv.jpg);background-position: center;background-size: cover">
+<div  style="background-color:#717171; background-position: center;background-size: cover">
 
-    <div class="w3-content w3-section w3-center w3-container" >
-        <img class="mySlides" src="https://cvmkr.com/images/slides/2.png" style="width:100%">
-        <img class="mySlides" src="https://cvmkr.com/images/slides/3.png" style="width:100%">
-        <img class="mySlides" src="https://cvmkr.com/images/slides/1.png" style="width:100%">
-        <img class="mySlides" src="https://farm1.staticflickr.com/623/32789375396_f45027ed7e_c.jpg" style="width:932px;height: 370px">
+    <div class="w3-content w3-container w3-center" >
+        <img class="mySlides" src="http://design-haven.com/wp-content/uploads/2015/11/Creative-Resume-and-CV-Template-g2-A4-Portrait-and-US-Letter-2.jpg" style="width:100%">
+        <img class="mySlides" src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/121/1211/1211860/professional-resume-v7-preview-01-f.jpg" style="width:100%">
+        <img class="mySlides" src="http://design-haven.com/wp-content/uploads/2015/11/Creative-Resume-and-CV-g1-A4-Landscape-3.jpg" style="width:100%">
+        <img class="mySlides" src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/121/1211/1211860/professional-resume-v7-preview-01-f.jpg" style="width:100%">
 
 
     </div>
@@ -66,7 +57,11 @@ function carousel() {
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
+<div class="w3-container w3-black">
 
+    <h1 class="w3-center" style="font-family: 'UTM Bebas' ">CV TEMPLATES</h1>
+
+</div>
 <ul>
     <li>
         <a href="{{  url_for('cv') }}">
