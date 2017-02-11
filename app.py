@@ -7,7 +7,7 @@ app = Flask(__name__)
 def hello_world():
     return render_template('cv_maker.html')
 
-@app.route('/cv_form1', methods=['GET','POST'])
+@app.route('/cv_tem1', methods=['GET','POST'])
 def cv_form_tem1():
     if request.method == 'GET':
         return render_template('cv_form.html')
@@ -43,7 +43,7 @@ def template2():
         return render_template('template2.html')
 
 
-@app.route('/cv_form2', methods=['GET','POST'])
+@app.route('/cv_tem2', methods=['GET','POST'])
 def cv_form_tem2():
     if request.method == 'GET':
         return render_template('cv_form.html')
@@ -60,7 +60,6 @@ def cv_form_tem2():
             'company': request.form['company'],
             'job-time': request.form['job-time'],
             'job-desc': request.form['job-desc'],
-
             #education
             'school-time' : request.form['school-time'],
             'school': request.form['school'],
