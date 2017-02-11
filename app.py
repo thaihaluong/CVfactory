@@ -2,10 +2,9 @@ from flask import Flask, render_template, request, url_for
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def hello_world():
-    return render_template('template.html')
+    return render_template("index.html")
 
 @app.route('/cv_form', methods=['GET','POST'])
 def cv_form():
