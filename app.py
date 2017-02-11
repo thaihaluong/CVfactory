@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
+<<<<<<< HEAD
     return render_template('template.html')
 
 @app.route('/cv_form', methods=['GET','POST'])
@@ -29,6 +30,17 @@ def cv_form():
             'edu-desc': request.form['edu-desc']
         }
         return render_template('updated_template.html',update=update)
+=======
+    return render_template('main.html')
+
+@app.route('/cv')
+def cvtemp1():
+    return render_template('Template 1.html')
+
+@app.route('/create')
+def create():
+        return render_template('Template 2.html')
+>>>>>>> 33dbfa2e2b9ea4c656378d2a9324c34f1c737683
 
 
 
