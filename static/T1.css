@@ -27,6 +27,7 @@
     }
     .bold {
     font-weight: bold;
+    font-family: "Arial", cursive, sans-serif;
     }
     .italic{
     font-style: italic;

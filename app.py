@@ -2,13 +2,12 @@ from flask import Flask, render_template, request, url_for
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def hello_world():
-    return render_template('cv_maker.html')
+    return render_template("index.html")
 
-@app.route('/cv_tem1', methods=['GET','POST'])
-def cv_form_tem1():
+@app.route('/cv_form', methods=['GET','POST'])
+def cv_form():
     if request.method == 'GET':
         return render_template('cv_form.html')
     if request.method == 'POST':
@@ -24,6 +23,7 @@ def cv_form_tem1():
             'company': request.form['company'],
             'job-time': request.form['job-time'],
             'job-desc': request.form['job-desc'],
+<<<<<<< HEAD
             #job1
             'job-title1': request.form['job-title1'],
             'company1': request.form['company1'],
@@ -36,6 +36,10 @@ def cv_form_tem1():
             'job-desc2': request.form['job-desc2'],
             #education
             'school-time' : request.form['school-time'],
+=======
+            
+            'keyskill': request.form['keyskill'],
+>>>>>>> 23d169a3769f759bac4d02e459d1097e16756195
             'school': request.form['school'],
             'qualification': request.form['qualification'],
             'edu-desc': request.form['edu-desc'],
@@ -52,18 +56,20 @@ def cv_form_tem1():
             #misc
             'img' : request.form['img']
         }
-        return render_template('updated_template1.html', update=update)
+        return render_template('updated_template.html',update=update)
+
     return render_template('main.html')
 
-@app.route('/template1')
-def template1():
-    return render_template('template1.html')
+@app.route('/cv')
+def cvtemp1():
+    return render_template('Template 1.html')
 
-@app.route('/template2')
-def template2():
-        return render_template('template2.html')
+@app.route('/create')
+def create():
+        return render_template('Template 2.html')
 
 
+<<<<<<< HEAD
 @app.route('/cv_tem2', methods=['GET','POST'])
 def cv_form_tem2():
     if request.method == 'GET':
@@ -111,6 +117,8 @@ def cv_form_tem2():
         }
         return render_template('updated_template2.html', update=update)
     return render_template('main.html')
+=======
+>>>>>>> 23d169a3769f759bac4d02e459d1097e16756195
 
 if __name__ == '__main__':
-    app.run(port=6979)
+    app.run()
