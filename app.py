@@ -8,7 +8,7 @@ def hello_world():
     return render_template('cv_maker.html')
 
 @app.route('/cv_form1', methods=['GET','POST'])
-def cv_form1():
+def cv_form_tem1():
     if request.method == 'GET':
         return render_template('cv_form.html')
     if request.method == 'POST':
@@ -32,7 +32,6 @@ def cv_form1():
             'edu-desc': request.form['edu-desc']
         }
         return render_template('updated_template1.html', update=update)
-
     return render_template('main.html')
 
 @app.route('/template1')
@@ -45,7 +44,7 @@ def template2():
 
 
 @app.route('/cv_form2', methods=['GET','POST'])
-def cv_form2():
+def cv_form_tem2():
     if request.method == 'GET':
         return render_template('cv_form.html')
     if request.method == 'POST':
@@ -69,7 +68,7 @@ def cv_form2():
             'edu-desc': request.form['edu-desc']
         }
         return render_template('updated_template2.html', update=update)
-
+    return render_template('main.html')
 
 if __name__ == '__main__':
     app.run(port=6979)
