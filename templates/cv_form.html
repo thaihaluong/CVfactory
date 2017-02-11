@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <meta charset="UTF-8">
+    <title>cv_form</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans,subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../static/form.css">
+</head>
+<body>
+
+        <h2 class="w3-container w3-blue" style="height: 50px;width: 100%">CV FORM</h2>
+        <div class="w3-container">
+        <form class="w3-form w3-container" method="post" action="{{ url_for('cv_form') }}">
+            <ul class="tab">
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'basic_info')">Basic Information</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'work_exp')">Working Experience</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'education')">Education</a></li>
+</ul>
+
+<div id="basic_info" class="tabcontent">
+  <h3>Personal Information</h3>
+  <label for="name">Full name</label><br>
+  <input type="text" id="name" name="name"><br>
+    <label >Email</label><br>
+  <input type="text" name="email"><br>
+    <label >Website</label><br>
+  <input type="text" name="website"><br>
+    <label >Phone Number</label><br>
+  <input type="text" name="phone"><br>
+    <label>DOB</label><br>
+    <input type="date" name="dob"><br>
+    <label >Address</label><br>
+    <input type="text" name="Address"><br>
+</div>
+
+<div id="personal_profile" class="tabcontent">
+    <h3>Personal Profile</h3>
+</div>
+<div id="work_exp" class="tabcontent">
+  <h3>Work Experience</h3>
+    <label >Job</label><br>
+  <input type="text" name="job_title"><br>
+    <label >Company</label><br>
+    <input type="text" name="company"><br>
+    <label >Start date</label><br>
+    <input type="text" name="start_date"><br>
+    <label >End date</label><br>
+    <input type="text" name="end_date"><br>
+    <label >Description</label><br>
+    <input type="text" name="description">
+
+</div>
+
+<div id="education" class="tabcontent">
+  <h3>Education</h3>
+  <p>text goes here</p>
+</div>
+
+
+{#            <input type="text" name="job-title-m">#}
+{##}
+{#            <input type="text" name="profile-desc">#}
+{#            #}
+{#            <input type="text" name="company">#}
+{#            <input type="text" name="job-time">#}
+{#            <input type="text"  name="job-desc">#}
+{#            <input type="text" name="keyskill">#}
+{#            <input type="text" name="school">#}
+{#            <input type="text" name="qualification">#}
+{#            <input type="text" name="edu-desc">#}
+{#            <input type="submit">#}
+
+        </form>
+            <input type="submit">
+    </div>
+<script>
+function openTab(evt, name) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(name).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+</script>
+
+</body>
+</html>
