@@ -24,12 +24,33 @@ def cv_form_tem1():
             'company': request.form['company'],
             'job-time': request.form['job-time'],
             'job-desc': request.form['job-desc'],
-
+            #job1
+            'job-title1': request.form['job-title1'],
+            'company1': request.form['company1'],
+            'job-time1': request.form['job-time1'],
+            'job-desc1': request.form['job-desc1'],
+            #job2
+            'job-title2': request.form['job-title2'],
+            'company2': request.form['company2'],
+            'job-time2': request.form['job-time2'],
+            'job-desc2': request.form['job-desc2'],
             #education
             'school-time' : request.form['school-time'],
             'school': request.form['school'],
             'qualification': request.form['qualification'],
-            'edu-desc': request.form['edu-desc']
+            'edu-desc': request.form['edu-desc'],
+            #edu1
+            'school-time1': request.form['school-time1'],
+            'school1': request.form['school1'],
+            'qualification1': request.form['qualification1'],
+            'edu-desc1': request.form['edu-desc1'],
+            #edu2
+            'school-time2': request.form['school-time2'],
+            'school2': request.form['school2'],
+            'qualification2': request.form['qualification2'],
+            'edu-desc2': request.form['edu-desc2'],
+            #misc
+            'img' : request.form['img']
         }
         return render_template('updated_template1.html', update=update)
     return render_template('main.html')
@@ -60,11 +81,33 @@ def cv_form_tem2():
             'company': request.form['company'],
             'job-time': request.form['job-time'],
             'job-desc': request.form['job-desc'],
+            #job1
+            'job-title1': request.form['job-title1'],
+            'company1': request.form['company1'],
+            'job-time1': request.form['job-time1'],
+            'job-desc1': request.form['job-desc1'],
+            #job2
+            'job-title2': request.form['job-title2'],
+            'company2': request.form['company2'],
+            'job-time2': request.form['job-time2'],
+            'job-desc2': request.form['job-desc2'],
             #education
             'school-time' : request.form['school-time'],
             'school': request.form['school'],
             'qualification': request.form['qualification'],
-            'edu-desc': request.form['edu-desc']
+            'edu-desc': request.form['edu-desc'],
+            #edu1
+            'school-time1': request.form['school-time1'],
+            'school1': request.form['school1'],
+            'qualification1': request.form['qualification1'],
+            'edu-desc1': request.form['edu-desc1'],
+            #edu2
+            'school-time2': request.form['school-time2'],
+            'school2': request.form['school2'],
+            'qualification2': request.form['qualification2'],
+            'edu-desc2': request.form['edu-desc2'],
+            #misc
+            'img' : request.form['img']
         }
         return render_template('updated_template2.html', update=update)
     return render_template('main.html')

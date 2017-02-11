@@ -37,7 +37,7 @@
 </div>
 
     <div class=" w3-col s1">
-    <img src="https://www.autostraddle.com/wp-content/uploads/2016/02/evan-rachel-wood-photograph-2.jpg"
+    <img src="{{ update['img'] }}"
          class="alignimg" width=150px height=180px>
     </div>
 
@@ -62,6 +62,32 @@
                     {{ update['edu-desc'] }}</ul>
 				</article>
             </div>
+
+           <div class="w3-col s3">
+                <p class="italic subDetails">{{ update['school-time1'] }}</p>
+
+            </div>
+			<div class="sectionContent w3-twothird">
+				<article>
+                    <p id ='Com1' class="bold ">{{ update['school1'] }}</p>
+
+                    <ul class="w3-justify">
+                    {{ update['edu-desc1'] }}</ul>
+				</article>
+            </div>
+
+           <div class="w3-col s3">
+                <p class="italic subDetails">{{ update['school-time2'] }}</p>
+
+            </div>
+			<div class="sectionContent w3-twothird">
+				<article>
+                    <p id ='Com1' class="bold ">{{ update['school2'] }}</p>
+
+                    <ul class="w3-justify">
+                    {{ update['edu-desc2'] }}</ul>
+				</article>
+            </div>
     </div>
 
     <div class="sectionTitle">
@@ -79,6 +105,30 @@
                     <p id ='Com1' class="bold ">{{ update['company'] }}</p>
 					<p id="Title1" class = "italic linespace">{{ update['job-title'] }}</p>
                     <p> {{ update['job-desc'] }}</p>
+				</article>
+            </div>
+
+            <div class="w3-col s3">
+                <p class="italic subDetails">{{update['job-time1'] }}</p>
+
+            </div>
+			<div class="sectionContent w3-twothird">
+				<article>
+                    <p id ='Com1' class="bold ">{{ update['company1'] }}</p>
+					<p id="Title1" class = "italic linespace">{{ update['job-title1'] }}</p>
+                    <p> {{ update['job-desc1'] }}</p>
+				</article>
+            </div>
+
+            <div class="w3-col s3">
+                <p class="italic subDetails">{{update['job-time2'] }}</p>
+
+            </div>
+			<div class="sectionContent w3-twothird">
+				<article>
+                    <p id ='Com1' class="bold ">{{ update['company2'] }}</p>
+					<p id="Title1" class = "italic linespace">{{ update['job-title2'] }}</p>
+                    <p> {{ update['job-desc2'] }}</p>
 				</article>
             </div>
     </div>

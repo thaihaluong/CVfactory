@@ -17,8 +17,10 @@
 <body id="top">
 <div id="cv" class="instaFade">
 	<div class="mainDetails">
-		<div id="headshot" class="quickFade">
-			<img src="headshot.jpg" alt="Alan Smith" />
+		<div>
+			<img src="{{ update['img'] }}"
+                 alt="{{ update['name'] }}"
+            width=150px height=180px>
 		</div>
 
 		<div id="name">
@@ -59,11 +61,25 @@
 
 			<div class="sectionContent">
 				<article>
-					<h2 id="job-title">{{ update['job-title'] }} at <span id="company">{{ update['company'] }}</span></h2>
+                    <h2 id="job-title">{{ update['job-title'] }} </h2>
+                    <h3 id="company">{{ update['company'] }}</h3>
 					<p class="subDetails" id="job-time">{{ update['job-time'] }}</p>
 					<p id="job-desc">{{ update['job-desc'] }}</p>
 				</article>
 
+                <article>
+                    <h2 id="job-title1">{{ update['job-title1'] }} </h2>
+                    <h3 id="company1">{{ update['company1'] }}</h3>
+					<p class="subDetails" id="job-time1">{{ update['job-time1'] }}</p>
+					<p id="job-desc1">{{ update['job-desc1'] }}</p>
+				</article>
+
+                <article>
+                    <h2 id="job-title2">{{ update['job-title2'] }} </h2>
+                    <h3 id="company2">{{ update['company2'] }}</h3>
+					<p class="subDetails" id="job-time2">{{ update['job-time2'] }}</p>
+					<p id="job-desc2">{{ update['job-desc2'] }}</p>
+				</article>
 			</div>
 			<div class="clear"></div>
 		</section>
@@ -83,6 +99,21 @@
 					<p id="qualification">{{ update['qualification'] }}</p>
                     <p id="edu-desc">{{ update['edu-desc'] }}</p>
 				</article>
+
+				<article>
+					<h2 id="school1">{{ update['school1'] }}</h2>
+                    <p class="subDetails" id="school-time1">{{ update['school-time1'] }}</p>
+					<p id="qualification1">{{ update['qualification1'] }}</p>
+                    <p id="edu-desc1">{{ update['edu-desc1'] }}</p>
+				</article>
+
+				<article>
+					<h2 id="school2">{{ update['school2'] }}</h2>
+                    <p class="subDetails" id="school-time2">{{ update['school-time2'] }}</p>
+					<p id="qualification2">{{ update['qualification2'] }}</p>
+                    <p id="edu-desc2">{{ update['edu-desc2'] }}</p>
+				</article>
+
 
 			</div>
 			<div class="clear"></div>
