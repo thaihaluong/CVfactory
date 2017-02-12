@@ -1,0 +1,70 @@
+ body {
+       background: #558C89 /* #74AFAD #6DBDD6;*/
+     }
+    section {
+
+        width: 800px;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2em;
+        background: #F6F6F6 /*white*/;
+
+
+    }
+    .resume{
+        margin-top: -0.1em;
+        margin-bottom: 0.4em;
+    }
+    html, body {
+  font-family: "Arial", cursive, sans-serif;
+
+    }
+    .vertical25 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+
+    }
+    .bold {
+    font-weight: bold;
+    font-family: "Arial", cursive, sans-serif;
+    }
+    .italic{
+    font-style: italic;
+    }
+    .left{
+
+      margin-left: 0.8em;
+    }
+    .alignimg{
+
+        margin-left: 5em;
+    }
+     hr {
+    display: block;
+    margin-top: -0.8em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+    margin-right: auto;
+    border-width: 2px;
+    border-color: black;
+    width:780px;
+
+}
+     .sectionTitle {
+      font-weight: bold;
+       margin-left: 0.8em;
+
+     }
+     .sectionContent {
+       margin-left: 0.8em;
+
+     }
+     .subDetails{
+
+
+     }
+     .linespace{
+       margin-top: -0.5em;
+
+           }
