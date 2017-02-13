@@ -10,9 +10,26 @@
         #work1,#work2,#school_1,#school_2{
             display:none
         }
+        @font-face{
+            font-family: 'utmbebas';
+            src: url(../static/UTM_Bebas.ttf);
+
+        }
+        @font-face{
+            font-family: 'nbncommerce';
+
+            src: url(../static/NBNCommerce.otf);
+        }
+        header{
+            font-family: 'utmbebas';
+        }
+        label,input,textarea,h3 {
+            font-family: 'nbncommerce';
+            letter-spacing: 1.1px;
+        }
     </style>
 </head>
-<header class="w3-container w3-center w3-black w3-xxlarge" style="font-family: 'UTM Bebas'; height: 68px;width: 100%">
+<header class="w3-container w3-center w3-black w3-xxlarge" style="height: 68px;width: 100%">
 
 CV FORM: ADDING YOUR INFORMATION
  </header>
@@ -21,14 +38,14 @@ CV FORM: ADDING YOUR INFORMATION
 
   <form class="w3-form w3-container" method="post">
             <ul class="tab">
-  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'basic_info')">Basic Information</a></li>
+  <li><a href="javascript:void(0)" class="tablinks active" onclick="openTab(event,'basic_info')">Basic Information</a></li>
   <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'work_exp')">Working Experience</a></li>
   <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'education')">Education</a></li>
   <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'picture')">Your Picture</a></li>
 </ul>
 
-<div id="basic_info" class="tabcontent">
-  <h3 style="font-family: 'NBN Commerce'">Personal Information</h3>
+<div id="basic_info" class="tabcontent" style="display:block">
+  <h3>Personal Information</h3>
   <label for="name">Full name</label><br>
   <input type="text" id="name" name="name"><br>
     <label >Email</label><br>
@@ -41,22 +58,27 @@ CV FORM: ADDING YOUR INFORMATION
     <input type="text" name="address"><br>
 </div>
 
-<div id="work_exp" class="tabcontent">
-  <h3 style="font-family: 'NBN Commerce'">Work Experience</h3>
-    <label >Job</label><br>
+<div id="work_exp" class="tabcontent w3-row">
+    <div class="w3-half">
+  <h3>Work Experience</h3>
+    <label >Job Title</label><br>
   <input type="text" name="job-title"><br>
     <label >Company</label><br>
     <input type="text" name="company"><br>
-    <label >Job Time</label><br>
+    <label >Working time</label><br>
     <input type="text" name="job-time"><br>
     <label >Description</label><br>
-    <input type="text" name="job-desc"><br>
+        <textarea name="job-desc" cols="10" rows="8"></textarea><br>
+        <button type='button' onclick="work1()" class="w3-button">Additional Entry #1</button>
+        <button type='button' onclick="work2()" class="w3-button">Additional Entry #2</button>
+</div>
 
 
 
 
-<button type='button' onclick="work1()" class="w3-button">Additional Entry #1</button>
    <div id="work1">
+
+       <h3>Additional Entry #1</h3>
      <label >Job Title</label><br>
   <input type="text" name="job-title1"><br>
     <label >Company</label><br>
@@ -66,8 +88,9 @@ CV FORM: ADDING YOUR INFORMATION
     <label >Description</label><br>
     <input type="text" name="job-desc1"><br>
 </div>
-    <button type='button' onclick="work2()" class="w3-button">Additional Entry #2</button>
+
     <div id="work2">
+        <h3>Additional Entry #2</h3>
     <label >Job Title</label><br>
     <input type="text" name="job-title2"><br>
     <label >Company</label><br>
@@ -79,8 +102,11 @@ CV FORM: ADDING YOUR INFORMATION
     </div>
 </div>
 
-<div id="education" class="tabcontent">
-  <h3 style="font-family: 'NBN Commerce'">Education</h3>
+
+<div id="education" class="tabcontent w3-row">
+    <div class="w3-half">
+
+  <h3>Education</h3>
 
     <label>School</label><br>
     <input type="text" name="school"><br>
@@ -92,8 +118,11 @@ CV FORM: ADDING YOUR INFORMATION
     <input type="text" name="edu-desc"><br>
 
     <button type='button' onclick="school_1()" class="w3-button">Additional Entry #1</button>
+    <button type='button' onclick="school_2()" class="w3-button">Additional Entry #2</button>
+</div>
 
     <div id="school_1">
+        <h3>Additional Entry #1</h3>
     <label>School</label><br>
     <input type="text" name="school1"><br>
     <label>School Time</label><br>
@@ -106,9 +135,9 @@ CV FORM: ADDING YOUR INFORMATION
 
 
 
-    <button type='button' onclick="school_2()" class="w3-button">Additional Entry #2</button>
 
     <div id="school_2">
+        <h3>Additional Entry #2</h3>
     <label>School</label><br>
     <input type="text" name="school2"><br>
     <label>School Time</label><br>
@@ -121,7 +150,7 @@ CV FORM: ADDING YOUR INFORMATION
 </div>
 
 <div id="picture" class="tabcontent">
-    <h3 style="font-family: 'NBN Commerce'">Your Picture</h3>
+    <h3>Your Picture</h3>
     <label>Link to Picture</label><br>
     <input type="text" name="img">
 </div>
@@ -130,6 +159,13 @@ CV FORM: ADDING YOUR INFORMATION
 
 
 <script>
+
+    function close(ID) {
+        var x = document.getElementById(ID);
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        }
+    }
     function work1(){
         var x = document.getElementById('work1');
     if (x.style.display === 'none') {
@@ -137,6 +173,8 @@ CV FORM: ADDING YOUR INFORMATION
     } else {
         x.style.display = 'none';
     }
+    close('work2')
+
     }
     function work2(){
         var x = document.getElementById('work2');
@@ -145,6 +183,7 @@ CV FORM: ADDING YOUR INFORMATION
     } else {
         x.style.display = 'none';
     }
+    close('work1')
     }
     function school_1(){
         var x = document.getElementById('school_1');
@@ -153,6 +192,7 @@ CV FORM: ADDING YOUR INFORMATION
     } else {
         x.style.display = 'none';
     }
+    close('school_2')
 
     }
     function school_2(){
@@ -162,7 +202,7 @@ CV FORM: ADDING YOUR INFORMATION
         } else {
             x.style.display = 'none';
         }
-
+    close('school_1')
     }
 function openTab(evt, name) {
     var i, tabcontent, tablinks;

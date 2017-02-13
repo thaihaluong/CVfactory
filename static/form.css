@@ -1,5 +1,5 @@
         input[type=text],input[type=date], select {
-    width: 30%;
+    width: 350px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -7,7 +7,17 @@
     border-radius: 4px;
     box-sizing: border-box;
 }
-
+        textarea{
+    width: 500px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+            white-space: pre;
+}
 input[type=submit] {
     width: 100%;
     background-color: #4CAF50;
@@ -59,7 +69,13 @@ ul.tab li a:focus, .active {
 
 /* Style the tab content */
 .tabcontent {
-    display: none;
+    display:none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.tabcontent1 {
+    display:block;
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
