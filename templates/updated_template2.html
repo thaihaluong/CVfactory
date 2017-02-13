@@ -5,9 +5,12 @@
     <title>Template 1</title>
     <link rel = "stylesheet" href="../static/w3.css">
     <link type="text/css" rel="stylesheet" href="../static/T1.css">
+    <link type="text/css" rel="stylesheet" href="../static/style.css">
+    <link type="text/css" rel="stylesheet" href="../static/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-<body>
-<section class="vertical25">
+<body  class="quickFade" >
+<section class="vertical25" style="margin:auto;s" >
 <div align="center" >
     <br class="linespace">
     <p id="Heading" class="bold w3-xlarge resume " >
@@ -107,7 +110,8 @@
                     <p> {{ update['job-desc'] }}</p>
 				</article>
             </div>
-
+     </div>
+    <div class="w3-row-padding">
             <div class="w3-col s3">
                 <p class="italic subDetails">{{update['job-time1'] }}</p>
 
@@ -119,7 +123,8 @@
                     <p> {{ update['job-desc1'] }}</p>
 				</article>
             </div>
-
+ </div>
+    <div class="w3-row-padding">
             <div class="w3-col s3">
                 <p class="italic subDetails">{{update['job-time2'] }}</p>
 
@@ -137,8 +142,12 @@
 
 </section>
 
-
-
+<button id="print"> Download </button>
+<script>
+    $("#print").click(function () {
+        window.print();
+    });
+</script>
 
 
 
