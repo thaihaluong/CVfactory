@@ -37,7 +37,7 @@ CV FORM: ADDING YOUR INFORMATION
 <body class="w3-container" style="font-family: 'NBN Commerce'">
 
   <form class="w3-form w3-container" method="post">
-            <ul class="tab">
+  <ul class="tab">
   <li><a href="javascript:void(0)" class="tablinks active" onclick="openTab(event,'basic_info')">Basic Information</a></li>
   <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'work_exp')">Working Experience</a></li>
   <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'education')">Education</a></li>
@@ -86,7 +86,7 @@ CV FORM: ADDING YOUR INFORMATION
     <label >Working time</label><br>
     <input type="text" name="job-time1"><br>
     <label >Description</label><br>
-    <input type="text" name="job-desc1"><br>
+    <textarea name="job-desc1" cols="10" rows="8"></textarea><br>
 </div>
 
     <div id="work2">
@@ -98,7 +98,7 @@ CV FORM: ADDING YOUR INFORMATION
     <label >Working time</label><br>
     <input type="text" name="job-time2"><br>
     <label >Description</label><br>
-    <input type="text" name="job-desc2">
+    <textarea name="job-desc2" cols="10" rows="8"></textarea><br>
     </div>
 </div>
 
@@ -115,7 +115,7 @@ CV FORM: ADDING YOUR INFORMATION
     <label>Qualification</label><br>
     <input type="text" name="qualification"><br>
     <label>Description</label><br>
-    <input type="text" name="edu-desc"><br>
+    <textarea name="edu-desc" cols="10" rows="8"></textarea><br>
 
     <button type='button' onclick="school_1()" class="w3-button">Additional Entry #1</button>
     <button type='button' onclick="school_2()" class="w3-button">Additional Entry #2</button>
@@ -130,7 +130,7 @@ CV FORM: ADDING YOUR INFORMATION
     <label>Qualification</label><br>
     <input type="text" name="qualification1"><br>
     <label>Description</label><br>
-    <input type="text" name="edu-desc1"><br>
+    <textarea name="edu-desc1" cols="10" rows="8"></textarea><br>
     </div>
 
 
@@ -145,16 +145,18 @@ CV FORM: ADDING YOUR INFORMATION
     <label>Qualification</label><br>
     <input type="text" name="qualification2"><br>
     <label>Description</label><br>
-    <input type="text" name="edu-desc2">
+    <textarea name="edu-desc2" cols="10" rows="8"></textarea><br>
     </div>
 </div>
 
 <div id="picture" class="tabcontent">
     <h3>Your Picture</h3>
     <label>Link to Picture</label><br>
-    <input type="text" name="img">
+
+    <input type="text" name="img" >
+
 </div>
-            <input class="w3-container w3-xlarge " style="font-family: 'UTM Bebas';background-color: #03415D"  type="submit">
+            <input class="w3-container w3-xlarge " style="font-family: 'utmbebas';background-color: #03415D"  type="submit">
         </form>
 
 

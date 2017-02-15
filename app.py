@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, url_for
+import os
 
 app = Flask(__name__)
-
+app.config['IMAGE_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)),'image')
 @app.route('/')
 def hello_world():
     return render_template("cv_maker.html")
@@ -111,11 +112,11 @@ def cv_form_tem2():
             'edu-desc2': request.form['edu-desc2'],
             #misc
             'img' : request.form['img']
+            }
 
-        }
 
         return render_template('updated_template2.html', update=update)
-    return render_template('main.html')
+
 
 if __name__ == '__main__':
-    app.run(port=3335)
+    app.run(port=3353)
