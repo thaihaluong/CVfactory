@@ -15,7 +15,18 @@
             font-family: 'utmbebas';
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script>
+        $("#demobtn").click(function () {
+            alert("You entered p1!");
+        });
+
+
+
+
+
+    </script>
 </head>
 <style>
 .mySlides {display:none;}
@@ -76,13 +87,13 @@ function carousel() {
 
     <div class="w3-container w3-padding-16 w3-row">
     <div class="w3-half w3-border-black ">
-        <h3 STYLE="font-family: 'UTM Bebas' " align="center">TEMPLATE 1</h3>
+        <h3 id ="temp1" STYLE="font-family: 'UTM Bebas' " align="center">TEMPLATE 1</h3>
         <img src="../static/Temp1.png" alt="Temp1" style="width:600px;height: 700px">
         <br/>
         <br/>
         <div align="center">
 
-            <button CLASS="w3-btn w3-round" style="background-color: #03415D;font-family: 'NBN Commerce'" >DEMO</button>
+            <button id="demobtn" CLASS="w3-btn w3-round" style="background-color: #03415D;font-family: 'NBN Commerce'" >DEMO</button>
             <a href="{{ url_for('cv_form_tem1') }}">
         <button CLASS="w3-btn w3-round" style="font-family: 'NBN Commerce'" >CHOOSE THIS ONE</button>
         </a>
@@ -100,6 +111,8 @@ function carousel() {
 
 </div>
 </ul>
+
+
 
 </body>
 </html>
