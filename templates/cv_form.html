@@ -221,4 +221,231 @@ function openTab(evt, name) {
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/w3.css">
+    <meta charset="UTF-8">
+    <title>cv_form</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans,subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../static/form.css">
+    <style>
+        #work1,#work2,#school_1,#school_2{
+            display:none
+        }
+        @font-face{
+            font-family: 'utmbebas';
+            src: url(../static/UTM_Bebas.ttf);
+
+        }
+        @font-face{
+            font-family: 'nbncommerce';
+
+            src: url(../static/NBNCommerce.otf);
+        }
+        header{
+            font-family: 'utmbebas';
+        }
+        label,input,textarea,h3 {
+            font-family: 'nbncommerce';
+            letter-spacing: 1.1px;
+        }
+    </style>
+</head>
+<header class="w3-container w3-center w3-black w3-xxlarge" style="height: 68px;width: 100%">
+
+CV FORM: ADDING YOUR INFORMATION
+ </header>
+
+<body class="w3-container" style="font-family: 'NBN Commerce'">
+
+  <form class="w3-form w3-container" method="post">
+  <ul class="tab">
+  <li><a href="javascript:void(0)" class="tablinks active" onclick="openTab(event,'basic_info')">Basic Information</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'work_exp')">Working Experience</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'education')">Education</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event,'picture')">Your Picture</a></li>
+</ul>
+
+<div id="basic_info" class="tabcontent" style="display:block">
+  <h3>Personal Information</h3>
+  <label for="name">Full name</label><br>
+  <input type="text" id="name" name="name"><br>
+    <label >Email</label><br>
+  <input type="text" name="email"><br>
+    <label >Phone Number</label><br>
+  <input type="text" name="phone"><br>
+    <label>DOB</label><br>
+    <input type="date" name="dob"><br>
+    <label >Address</label><br>
+    <input type="text" name="address"><br>
+</div>
+
+<div id="work_exp" class="tabcontent w3-row">
+    <div class="w3-half">
+  <h3>Work Experience</h3>
+    <label >Job Title</label><br>
+  <input type="text" name="job-title"><br>
+    <label >Company</label><br>
+    <input type="text" name="company"><br>
+    <label >Working time</label><br>
+    <input type="text" name="job-time"><br>
+    <label >Description</label><br>
+        <textarea name="job-desc" cols="10" rows="8"></textarea><br>
+        <button type='button' onclick="work1()" class="w3-button">Additional Entry #1</button>
+        <button type='button' onclick="work2()" class="w3-button">Additional Entry #2</button>
+</div>
+
+
+
+
+   <div id="work1">
+
+       <h3>Additional Entry #1</h3>
+     <label >Job Title</label><br>
+  <input type="text" name="job-title1"><br>
+    <label >Company</label><br>
+    <input type="text" name="company1"><br>
+    <label >Working time</label><br>
+    <input type="text" name="job-time1"><br>
+    <label >Description</label><br>
+    <textarea name="job-desc1" cols="10" rows="8"></textarea><br>
+</div>
+
+    <div id="work2">
+        <h3>Additional Entry #2</h3>
+    <label >Job Title</label><br>
+    <input type="text" name="job-title2"><br>
+    <label >Company</label><br>
+    <input type="text" name="company2"><br>
+    <label >Working time</label><br>
+    <input type="text" name="job-time2"><br>
+    <label >Description</label><br>
+    <textarea name="job-desc2" cols="10" rows="8"></textarea><br>
+    </div>
+</div>
+
+
+<div id="education" class="tabcontent w3-row">
+    <div class="w3-half">
+
+  <h3>Education</h3>
+
+    <label>School</label><br>
+    <input type="text" name="school"><br>
+    <label>School Time</label><br>
+    <input type="text" name="school-time"><br>
+    <label>Qualification</label><br>
+    <input type="text" name="qualification"><br>
+    <label>Description</label><br>
+    <textarea name="edu-desc" cols="10" rows="8"></textarea><br>
+
+    <button type='button' onclick="school_1()" class="w3-button">Additional Entry #1</button>
+    <button type='button' onclick="school_2()" class="w3-button">Additional Entry #2</button>
+</div>
+
+    <div id="school_1">
+        <h3>Additional Entry #1</h3>
+    <label>School</label><br>
+    <input type="text" name="school1"><br>
+    <label>School Time</label><br>
+    <input type="text" name="school-time1"><br>
+    <label>Qualification</label><br>
+    <input type="text" name="qualification1"><br>
+    <label>Description</label><br>
+    <textarea name="edu-desc1" cols="10" rows="8"></textarea><br>
+    </div>
+
+
+
+
+    <div id="school_2">
+        <h3>Additional Entry #2</h3>
+    <label>School</label><br>
+    <input type="text" name="school2"><br>
+    <label>School Time</label><br>
+    <input type="text" name="school-time2"><br>
+    <label>Qualification</label><br>
+    <input type="text" name="qualification2"><br>
+    <label>Description</label><br>
+    <textarea name="edu-desc2" cols="10" rows="8"></textarea><br>
+    </div>
+</div>
+
+<div id="picture" class="tabcontent">
+    <h3>Your Picture</h3>
+    <label>Link to Picture</label><br>
+
+    <input type="text" name="img" >
+
+</div>
+            <input class="w3-container w3-xlarge " style="font-family: 'utmbebas';background-color: #03415D"  type="submit">
+        </form>
+
+
+<script>
+
+    function close(ID) {
+        var x = document.getElementById(ID);
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        }
+    }
+    function work1(){
+        var x = document.getElementById('work1');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+    close('work2')
+
+    }
+    function work2(){
+        var x = document.getElementById('work2');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+    close('work1')
+    }
+    function school_1(){
+        var x = document.getElementById('school_1');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+    close('school_2')
+
+    }
+    function school_2(){
+        var x = document.getElementById('school_2');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    close('school_1')
+    }
+function openTab(evt, name) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(name).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+</script>
+
+</body>
+
 </html>
