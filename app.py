@@ -4,18 +4,20 @@ import os
 import pdfkit
 app = Flask(__name__)
 
+
+
+app.config['IMAGE_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)),'image')
+@app.route('/')
+def hello_world():
+    return render_template("cv_maker.html")
+
 @app.route ('/print')
 def printPDF():
     dir_path = os.getcwd()
     config = pdfkit.configuration(wkhtmltopdf=dir_path + "\static\wkhtmltopdf\\bin\wkhtmltopdf.exe")
     pdfkit.from_url('https://vi.wikipedia.org/wiki/M%C3%A8o', dir_path+'\static\out.pdf', configuration=config)
     #print ra file out.pdf
-printPDF()
-
-app.config['IMAGE_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)),'image')
-@app.route('/')
-def hello_world():
-    return render_template("cv_maker.html")
+    return ("Done")
 
 @app.route('/cv_form1', methods=['GET','POST'])
 def cv_form_tem1():
