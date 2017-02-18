@@ -2,14 +2,15 @@ from flask import Flask, render_template, request, url_for
 import os
 
 import pdfkit
-
-
-dir_path = os.getcwd()
-config = pdfkit.configuration(wkhtmltopdf=dir_path + "\wkhtmltopdf\\bin\wkhtmltopdf.exe")
-pdfkit.from_url('http://jane68.herokuapp.com/cv', 'out.pdf', configuration=config)
-
-
 app = Flask(__name__)
+
+@app.route ('/print')
+def print():
+    dir_path = os.getcwd()
+    config = pdfkit.configuration(wkhtmltopdf=dir_path + "\wkhtmltopdf\\bin\wkhtmltopdf.exe")
+    pdfkit.from_url('http://jane68.herokuapp.com/cv', 'out.pdf', configuration=config)
+
+
 app.config['IMAGE_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)),'image')
 @app.route('/')
 def hello_world():
