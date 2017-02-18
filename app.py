@@ -7,9 +7,9 @@ app = Flask(__name__)
 @app.route ('/print')
 def print():
     dir_path = os.getcwd()
-    config = pdfkit.configuration(wkhtmltopdf=dir_path + "\wkhtmltopdf\\bin\wkhtmltopdf.exe")
-    pdfkit.from_url('http://jane68.herokuapp.com/cv', 'out.pdf', configuration=config)
-
+    config = pdfkit.configuration(wkhtmltopdf=dir_path + "\static\wkhtmltopdf\\bin\wkhtmltopdf.exe")
+    pdfkit.from_url('https://www.google.com.vn/?gfe_rd=cr&ei=8MKnWLbBGoGA0AT5xL2IBQ', 'out.pdf', configuration=config)
+print()
 
 app.config['IMAGE_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)),'image')
 @app.route('/')
