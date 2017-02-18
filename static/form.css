@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
         input[type=text],input[type=date], select {
     width: 30%;
     width: 350px;
@@ -75,8 +75,7 @@ ul.tab li a:focus, .active {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
-    border-top: none;
-=======
+    border-top: none;}
         input[type=text],input[type=date], select {
     width: 350px;
     padding: 12px 20px;
@@ -158,5 +157,4 @@ ul.tab li a:focus, .active {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
->>>>>>> 7b65b8002b1a6ff750a55a1cb438695b915597a9
 }

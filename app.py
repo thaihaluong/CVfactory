@@ -1,9 +1,16 @@
 from flask import Flask, render_template, request, url_for
 import os
 
+import pdfkit
+
+
+dir_path = os.getcwd()
+config = pdfkit.configuration(wkhtmltopdf=dir_path + "\wkhtmltopdf\\bin\wkhtmltopdf.exe")
+pdfkit.from_url('http://jane68.herokuapp.com/cv', 'out.pdf', configuration=config)
+
+
 app = Flask(__name__)
 app.config['IMAGE_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)),'image')
-
 @app.route('/')
 def hello_world():
     return render_template("cv_maker.html")
@@ -112,14 +119,12 @@ def cv_form_tem2():
             'qualification2': request.form['qualification2'],
             'edu-desc2': request.form['edu-desc2'],
             #misc
-            'img' : request.form['img']}
-
+            'img' : request.form['img']
+            }
 
         return render_template('updated_template2.html', update=update)
 
 
+
 if __name__ == '__main__':
-
-    app.run()
-
-
+    app.run(port=3353)
